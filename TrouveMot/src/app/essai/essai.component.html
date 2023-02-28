@@ -1,0 +1,12 @@
+<div *ngIf="this.motusService.cpt <= 5" [style]=" 'display: flex; margin-left: 5px' ">
+  <div *ngFor='let lettres of this.motusService.lettreMot; let i = index'>
+    <div [style]=" 'margin-top: 10px;font-size: 25px;margin-right: 5px; background-color: ' + this.motusService.couleurLettre[i]">
+      <span>
+        {{lettres}}
+      </span>
+    </div>
+  </div>
+</div>
+<div *ngIf="this.motusService.cpt > 5">
+  <span class="badge bagde-warning">Vous avez perdu (5 essais)</span>
+</div>
